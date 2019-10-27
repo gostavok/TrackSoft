@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<link rel="shortcut icon" href="/static/TS.png">
+        <meta charset="utf-8">
+        <link id=estilo rel=stylesheet href=/static/css/global.css />
+        <title>{{title}}</title>
+	</head>
+	<body>
+		
+		<div class="container">
+			<header class="flex align-center justify-between">
+					<h2>TrackSoft</h2>
+				{%if session['usuario']%}
+				
+					<a href="/logout">Log Out</a>
+				
+				{%endif%}
+			</header>
+			<div id="content" class="content bg-image flex align-center row-reverse">		
+			
+				{%block conteudo%}{%endblock%}
+			</div> 
+			<footer class="flex align-center justify-center">
+				<span>Developed on Hackathon 2019.</span>
+			</footer>
+		</div>
+	<script type="text/javascript">
+		let signupForm = document.querySelector("#signup");
+		let loginForm = document.querySelector("#login");
+		let loginLink = document.querySelector("#login-link");
+		let signupLink = document.querySelector("#signup-link");
+		loginLink.onclick = () => {
+			signupForm.classList.add("hidden");
+			loginForm.classList.remove("hidden");
+		}
+		signupLink.onclick = () => {
+			signupForm.classList.remove("hidden");
+			loginForm.classList.add("hidden");
+		}
+	</script>
+</body>
+</html>

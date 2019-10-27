@@ -1,0 +1,19 @@
+{%extends "modelo.html"%} {%block conteudo%}
+		<form id="signup" class="flex flex-column align-center" action=/cadastro_usuario method="POST">
+			<h2>Cadastre-se para começar</h2>
+			<input type="text" name="nome" placeholder="Nome" />
+			<input type="text" name="email" placeholder="Email"/>
+			<input type="text" name="CPF" placeholder="CPF"/>
+			<input type="password" name="senha1" placeholder="Senha"/>
+			<input type="password" name="senha2" placeholder="Confirmar Senha"/>
+			<input type="submit" value="Cadastrar">
+			<a href="#" id="login-link" style="margin-top: 5px;">Já tem sua conta?</a>
+		</form>
+		<form id="login" class="flex flex-column align-center hidden" action=/login method="POST">
+			<h2>Entre com uma conta existente</h2>
+			<input type="text" name="email" placeholder="Email" />
+			<input type="password" name="senha" placeholder="Senha"/>
+			<button type="submit">Entrar</button>
+			<a href="#" id="signup-link" style="margin-top: 5px;">Não tenho uma conta.</a>
+		</form>
+{%endblock%}

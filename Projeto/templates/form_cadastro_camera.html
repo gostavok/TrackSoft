@@ -1,0 +1,21 @@
+{%extends "modelo.html"%} {%block conteudo%}
+    <link rel="stylesheet" type="text/css" href="../static/css/perfil.css"/>
+    <div class="plan" style="width: 100%;">
+        <h2 style="margin-bottom: 10px;">Cadastre uma nova câmera</h2>
+        <form action="/cadastro_camera" method="POST" class="flex flex-column align-center">
+            <input type="text" name="rua" placeholder="Rua">
+            <input type="text" name="numero" placeholder="Número">
+            <input type="text" name="bairro" placeholder="Bairro">
+            <input type="text" name="cidade" placeholder="Cidade">
+            <input type="text" name="estado" placeholder="Estado(UF)">
+            <input type="text" name="descricao" placeholder="Descrição">
+            <span style="margin: 10px 0;">*Ao clicar em cadastrar você concorda que está ciente e concede autorização do uso das imagens da câmera.</span>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <script>
+        let content = document.querySelector("#content");
+        content.classList.remove("bg-image");
+        content.classList.remove("row-reverse")
+    </script>
+{%endblock%}

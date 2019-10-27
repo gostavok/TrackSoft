@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<link rel="shortcut icon" href="/static/TS.png">
+        <meta charset="utf-8">
+        <link id=estilo rel=stylesheet href=/static/css/global.css />
+        <link id=estilo rel=stylesheet href=/static/css/perfil.css />
+        <title>{{title}}</title>
+	</head>
+	<body>
+		
+	<div class="container">
+		<header class="flex align-center justify-between">
+                <h2>TrackSoft</h2>
+                {%if session['usuario']%}
+				
+					<a href="/logout"> Log Out</a>
+				
+				{%endif%}
+        </header>	
+        <div class="content flex flex-column">
+            <div class="plan">
+                <div class="board-header flex align-center justify-between">
+                    <h2>Suas câmeras</h2>
+                    <a href="/form_cadastro_camera">Cadastrar</a>
+                </div>
+                <div class="board flex">
+                    {%for a in cameras_pessoa%}
+                    <article>
+                        <h3>{{a.descricao}}</h3>
+                        <p>{{a.rua}}</p>
+                    </article>
+                    {%endfor%}
+                </div>
+            </div>
+            <div class="plan">
+                <div class="board-header flex align-center justify-between">
+                    <h2>Seus veículos</h2>
+                    <a href="/form_cadastro_veiculo">Cadastrar</a>
+                </div>
+                <div class="board flex">
+                    {%for a in carros_pessoa%}
+                    <article>
+                        <h3>{{a.modelo}}</h3>
+                        <p>{{a.placa}}</p>
+                    </article>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+        <footer class="flex align-center justify-center">
+            <span>Developed on Hackathon 2019.</span>
+        </footer> 
+    </div>
+    <script type="text/javascript">
+    let signupForm = document.querySelector("#signup");
+    let loginForm = document.querySelector("#login");
+    let loginLink = document.querySelector("#login-link");
+    let signupLink = document.querySelector("#signup-link");
+    loginLink.onclick = () => {
+        signupForm.classList.add("hidden");
+        loginForm.classList.remove("hidden");
+    }
+    signupLink.onclick = () => {
+        signupForm.classList.remove("hidden");
+        loginForm.classList.add("hidden");
+    }
+    </script>
+</body>
+</html>

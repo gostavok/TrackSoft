@@ -1,0 +1,21 @@
+{%extends "modelo.html"%} {%block conteudo%}
+<link rel="stylesheet" type="text/css" href="../static/css/perfil.css"/>
+    <div class="plan" style="width: 100%;">
+        <h2 style="margin-bottom: 10px;">Cadastre um novo veículo</h2>
+        <form action="/cadastro_veiculo" method="POST" class="flex flex-column align-center">
+            <input type="text" name="marca" placeholder="Marca">
+            <input type="text" name="modelo" placeholder="Nome">
+            <input type="text" name="cor" placeholder="Cor">
+            <input type="text" name="placa" placeholder="Placa">
+            <input type="text" name="ano" placeholder="Ano">
+            <input type="file" name="foto" accept="imagem/">
+            <input type="text" name="descricao" placeholder="Descrição">
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <script>
+        let content = document.querySelector("#content");
+        content.classList.remove("bg-image");
+        content.classList.remove("row-reverse")
+    </script>
+{%endblock%}
