@@ -7,5 +7,5 @@ Desenvolvedores :
   - Eduardo Meneghim
   - Gustavo Kistner
   - Ruan Scherer
-  - Tiago Stasats
+  - Tiago Stasaitis
 
