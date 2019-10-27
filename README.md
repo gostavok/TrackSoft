@@ -1,2 +1,11 @@
 # TrackSoft
-Repositório do projeto TrackSoft (desenvolvido durante o Hackathon Cedup)
+
+Uma plataforma que facilita e agiliza o  processo de rastreamento de veículos.
+
+Desenvolvedores :
+  
+  - Eduardo Meneghim
+  - Gustavo Kistner
+  - Ruan Scherer
+  - Tiago Stasats
+
